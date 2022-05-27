@@ -90,7 +90,7 @@ float Cau_3(int n)
 {
 	float S = 1.0;
 	int i;
-	for(i = 1; i <= n; i++)
+	for(i = 2; i <= n; i++)
 	{
 		S += 1.0/giai_thua(i);
 	}

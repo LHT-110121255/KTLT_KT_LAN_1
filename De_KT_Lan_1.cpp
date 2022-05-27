@@ -3,7 +3,7 @@
 void KT_nhiet_do(float c);
 void Xuat_tam_giac(int n);
 float Cau_3(int n);
-float Cau3_1(int n);
+float giai_thua(int n);
 void NhapMang(float *arr, int n);
 void XuatMang(float *arr, int n);
 void swap(float &a, float &b); 
@@ -81,15 +81,10 @@ void Xuat_tam_giac(int n)
 		printf("\n");
 	}
 }
-float Cau3_1(int n)
+float giai_thua(int n)
 {
-	int sum = 0;
-	int i;
-	for(i = 1; i <= n; i++)
-	{
-		sum += i;
-	}
-	return sum;
+	if(n == 1) return 1;
+        return n* giai_thua(n-1);
 }
 float Cau_3(int n)
 {
@@ -97,7 +92,7 @@ float Cau_3(int n)
 	int i;
 	for(i = 1; i <= n; i++)
 	{
-		S += 1.0/Cau3_1(i);
+		S += 1.0/giai_thua(i);
 	}
 	return S;
 }
